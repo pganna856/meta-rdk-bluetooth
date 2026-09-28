@@ -8,7 +8,7 @@ RPROVIDES:${PN} = "virtual/vendor-bluetooth-sdk"
 DEPENDS = "cmake-native breakpad breakpad-wrapper bluez5 glib-2.0 sdbus-c++ pipewire wireplumber"
 RDEPENDS:${PN} = "bluez5 sdbus-c++ pipewire wireplumber"
 SRC_URI = "git://github.com/rdkcentral/bluetooth-sdk.git;protocol=https;branch=RDK-61473-rebased-stub"
-SRCREV = "792cf833fa70cd4d9b69aa5addbb5ecc54f6ac9c"
+SRCREV = "c0fefc2d585d8d706dcd6077062689633533991c"
 S = "${WORKDIR}/git"
 
 CFLAGS:append = " -I${STAGING_INCDIR} "
