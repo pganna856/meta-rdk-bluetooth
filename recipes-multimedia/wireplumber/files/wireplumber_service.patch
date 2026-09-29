@@ -2,7 +2,7 @@ diff --git a/src/systemd/system/wireplumber.service.in b/src/systemd/system/wire
 index e7e3751b..448e8b1e 100644
 --- a/src/systemd/system/wireplumber.service.in
 +++ b/src/systemd/system/wireplumber.service.in
-@@ -14,9 +14,13 @@ Type=simple
+@@ -14,9 +14,11 @@ Type=simple
  AmbientCapabilities=CAP_SYS_NICE
  ExecStart=@WP_BINARY@
  Restart=on-failure
@@ -13,8 +13,6 @@ index e7e3751b..448e8b1e 100644
 +Environment=WIREPLUMBER_DEBUG=4
  Environment=GIO_USE_VFS=local
 +Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
-+StandardOutput=file:/tmp/wireplumber.log
-+StandardError=file:/tmp/wireplumber.log
  
  [Install]
  WantedBy=pipewire.service
